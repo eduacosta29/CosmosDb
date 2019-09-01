@@ -12,7 +12,7 @@
         IList<T> GetList<T>()
             where T : EntityBase;
 
-        Task Add<T>(T entity) where T : EntityBase;
+        Task<T> Add<T>(T entity) where T : EntityBase;
 
         Task CreateDataBase(string name);
 

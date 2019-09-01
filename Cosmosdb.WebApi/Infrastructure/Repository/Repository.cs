@@ -1,13 +1,14 @@
-﻿using Microsoft.Azure.Documents.Client;
-
-namespace Cosmosdb.WebApi.Infrastructure.Repository
+﻿namespace Cosmosdb.WebApi.Infrastructure.Repository
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Linq;
+    using System.Runtime.InteropServices.ComTypes;
     using System.Threading.Tasks;
     using Cosmosdb.WebApi.Model;
     using Microsoft.Azure.Documents;
+    using Microsoft.Azure.Documents.Client;
 
     public class Repository : IRepository
     {
@@ -20,6 +21,8 @@ namespace Cosmosdb.WebApi.Infrastructure.Repository
 
         public Repository(IDocumentClient docoDocumentClient, Configuration.Configuration configuration)
         {
+
+            
             this._iDocumentClient = docoDocumentClient;
             this._configuration = configuration;
             this._databaseUri = UriFactory.CreateDatabaseUri(this._configuration.CosmosDb.DatabaseName);
@@ -30,9 +33,10 @@ namespace Cosmosdb.WebApi.Infrastructure.Repository
 
         }
 
-        public Task Add<T>(T entity) where T : EntityBase
+        public async Task<T> Add<T>(T entity) where T : EntityBase
         {
-            throw new NotImplementedException();
+           var _datos =  await  this._iDocumentClient.CreateDocumentAsync(this._databaseCollectionUri, entity);
+           return (T)new EntityBase() {ID = _datos.Resource.Id};
         }
 
         public IEnumerable<string> CollectionQuery()

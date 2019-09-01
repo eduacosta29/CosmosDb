@@ -1,13 +1,15 @@
-﻿using AutoMapper;
-using Swashbuckle.AspNetCore.Swagger;
-
-namespace Cosmosdb.WebApi
+﻿namespace Cosmosdb.WebApi
 {
     using System;
+    using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
+    using System.Reflection;
     using System.Threading.Tasks;
+    using AutoMapper;
     using Cosmosdb.WebApi.Infrastructure.Repository;
+    using MediatR;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.HttpsPolicy;
@@ -18,9 +20,7 @@ namespace Cosmosdb.WebApi
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
-    using System;
-    using System.Reflection;
-    using System.IO;
+    using Swashbuckle.AspNetCore.Swagger;
 
     public class Startup
     {
@@ -45,13 +45,16 @@ namespace Cosmosdb.WebApi
 
             services.AddSingleton<IDocumentClient>(new DocumentClient(new Uri(this._configuration.CosmosDb.URI), this._configuration.CosmosDb.Key));
             services.AddTransient<IRepository, Repository>();
-            services.AddAutoMapper(typeof(Startup));
+           
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddHealthChecks();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info() { Title = "My DAB API", Version = "V3.2.2" });
+                c.SwaggerDoc("v1", new Info() { Title = "CosmosDb API", Version = "V3.2.2" });
             });
+
+            services.AddAutoMapper(typeof(Startup).Assembly);
+            services.AddMediatR(typeof(Startup).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,7 +75,7 @@ namespace Cosmosdb.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CosmosDb API V1");
                
             });
         }

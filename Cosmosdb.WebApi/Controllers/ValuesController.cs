@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Cosmosdb.WebApi.Infrastructure.Repository;
 using Cosmosdb.WebApi.Model;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cosmosdb.WebApi.Controllers
@@ -14,9 +15,11 @@ namespace Cosmosdb.WebApi.Controllers
     {
 
         private readonly IRepository _repository;
-        public ValuesController(IRepository repository)
+        private IMediator _mediator;
+        public ValuesController(IRepository repository, IMediator mediator)
         {
             this._repository = repository;
+            this._mediator = mediator;
         }
 
         // GET api/values
@@ -34,6 +37,11 @@ namespace Cosmosdb.WebApi.Controllers
             return this._repository.GetList<Family>().ToList();
         }
 
+        [HttpPost]
+        [ProducesResponseType( 200)]
+        public async Task<IActionResult> AddFamily([FromBody]Features.AddFamily.FamilyModel familyModel) =>  await this._mediator.Send(familyModel);
+        
+
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
@@ -41,11 +49,11 @@ namespace Cosmosdb.WebApi.Controllers
             return "value";
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        //// POST api/values
+        //[HttpPost]
+        //public void Post([FromBody] string value)
+        //{
+        //}
 
         // PUT api/values/5
         [HttpPut("{id}")]
