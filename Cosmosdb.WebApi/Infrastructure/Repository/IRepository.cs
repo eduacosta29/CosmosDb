@@ -9,14 +9,16 @@
     public interface IRepository
     {
 
-        Task<IList<T>> GetList<T>()
+        IList<T> GetList<T>()
             where T : EntityBase;
-
-        Task  CreateDataBase(string name);
 
         Task Add<T>(T entity) where T : EntityBase;
 
+        Task CreateDataBase(string name);
+
         IEnumerable<string> DataBaseQuery();
+
+        IEnumerable<string> CollectionQuery();
 
     }
 }

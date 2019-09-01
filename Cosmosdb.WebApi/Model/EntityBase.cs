@@ -1,4 +1,6 @@
-﻿namespace Cosmosdb.WebApi.Model
+﻿using Microsoft.Azure.Documents;
+
+namespace Cosmosdb.WebApi.Model
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +9,7 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Serialization;
 
-    public class EntityBase
+    public class EntityBase : Document
     {
 
         [JsonProperty("id")]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Cosmosdb.WebApi.Infrastructure.Repository;
+using Cosmosdb.WebApi.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cosmosdb.WebApi.Controllers
@@ -23,6 +24,14 @@ namespace Cosmosdb.WebApi.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             return this._repository.DataBaseQuery().ToList();
+        }
+
+        [HttpGet]
+        [Route("families")]
+        [ProducesResponseType(typeof(IEnumerable<Family>), 200)]
+        public ActionResult<IEnumerable<Family>> Families()
+        {
+            return this._repository.GetList<Family>().ToList();
         }
 
         // GET api/values/5

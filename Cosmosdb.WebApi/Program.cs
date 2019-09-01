@@ -19,8 +19,21 @@ namespace Cosmosdb.WebApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging((hostingContext, logbuilder) =>
+                {
+                    logbuilder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    logbuilder.AddConsole();
+                })
+                .ConfigureAppConfiguration((builderContext, config) =>
+                    {
+                        IHostingEnvironment env =
+                            builderContext.HostingEnvironment;
+                        config
+                            .AddJsonFile("appsettings.json", optional:
+                                false, reloadOnChange: true)
+                            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+                    })
+                .UseStartup<Startup>();
 
-                .UseStartup<Startup>()
-                ;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Swashbuckle.AspNetCore.Swagger;
+﻿using AutoMapper;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Cosmosdb.WebApi
 {
@@ -23,10 +24,13 @@ namespace Cosmosdb.WebApi
 
     public class Startup
     {
+
+        private readonly Configuration.Configuration _configuration;
         public Startup(IConfiguration configuration)
         {
+            _configuration = new Configuration.Configuration();
             Configuration = configuration;
-            //configuration.Bind("CosmosDb", new WebApi.Configuration());
+            configuration.Bind(_configuration);
 
             
         }
@@ -36,10 +40,14 @@ namespace Cosmosdb.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var t = Configuration.GetSection("CosmosDb:URI").Value;
-            services.AddSingleton<IDocumentClient>(new DocumentClient(new Uri(Configuration.GetSection("CosmosDb:URI").Value), Configuration.GetSection("CosmosDb:Key").Value));services.AddTransient<IRepository, Repository>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton(this._configuration);
+            //services.AddSingleton<IDocumentClient>(new DocumentClient(new Uri(Configuration.GetSection("CosmosDb:URI").Value), Configuration.GetSection("CosmosDb:Key").Value));services.AddTransient<IRepository, Repository>();
 
+            services.AddSingleton<IDocumentClient>(new DocumentClient(new Uri(this._configuration.CosmosDb.URI), this._configuration.CosmosDb.Key));
+            services.AddTransient<IRepository, Repository>();
+            services.AddAutoMapper(typeof(Startup));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddHealthChecks();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info() { Title = "My DAB API", Version = "V3.2.2" });
@@ -58,7 +66,7 @@ namespace Cosmosdb.WebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseHealthChecks("/health");
             app.UseHttpsRedirection();
             app.UseMvc().UseMvcWithDefaultRoute();
             app.UseSwagger();

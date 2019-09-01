@@ -1,4 +1,4 @@
-﻿namespace Cosmosdb.WebApi
+﻿namespace Cosmosdb.WebApi.Configuration
 {
     public class Configuration
     {
