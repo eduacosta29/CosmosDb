@@ -9,8 +9,8 @@ C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\obj\Debug\netco
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\obj\Debug\netcoreapp2.2\Cosmosdb.WebApi.AssemblyInfoInputs.cache
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\obj\Debug\netcoreapp2.2\Cosmosdb.WebApi.AssemblyInfo.cs
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\obj\Debug\netcoreapp2.2\Cosmosdb.WebApi.RazorTargetAssemblyInfo.cache
-C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\bin\Debug\netcoreapp2.2\Microsoft.Azure.Cosmos.ServiceInterop.dll
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\bin\Debug\netcoreapp2.2\Cosmos.CRTCompat.dll
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\bin\Debug\netcoreapp2.2\Cosmosdb.WebApi.pdb
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\obj\Debug\netcoreapp2.2\Cosmosdb.WebApi.dll
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\obj\Debug\netcoreapp2.2\Cosmosdb.WebApi.pdb
+C:\Users\eduac\source\repos\eduacosta29\CosmosDb\Cosmosdb.WebApi\bin\Debug\netcoreapp2.2\Microsoft.Azure.Documents.ServiceInterop.dll
