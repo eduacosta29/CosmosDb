@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Cosmosdb.WebApi.Infrastructure.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cosmosdb.WebApi.Controllers
@@ -10,11 +11,18 @@ namespace Cosmosdb.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+
+        private readonly IRepository _repository;
+        public ValuesController(IRepository repository)
+        {
+            this._repository = repository;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return this._repository.DataBaseQuery().ToList();
         }
 
         // GET api/values/5

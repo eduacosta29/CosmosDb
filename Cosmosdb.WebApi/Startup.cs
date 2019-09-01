@@ -1,4 +1,6 @@
-﻿namespace Cosmosdb.WebApi
+﻿using Swashbuckle.AspNetCore.Swagger;
+
+namespace Cosmosdb.WebApi
 {
     using System;
     using System.Collections.Generic;
@@ -15,6 +17,9 @@
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
+    using System;
+    using System.Reflection;
+    using System.IO;
 
     public class Startup
     {
@@ -31,10 +36,14 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var t = Configuration.GetSection("CosmosDb:URI").Value;
+            services.AddSingleton<IDocumentClient>(new DocumentClient(new Uri(Configuration.GetSection("CosmosDb:URI").Value), Configuration.GetSection("CosmosDb:Key").Value));services.AddTransient<IRepository, Repository>();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddSingleton<IDocumentClient>(new DocumentClient(new Uri(Configuration.GetSection("CosmosDb:URI").ToString()), Configuration.GetSection("CosmosDb:Key").ToString()));
-            services.AddTransient<IRepository, Repository>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info() { Title = "My DAB API", Version = "V3.2.2" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +60,13 @@
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc().UseMvcWithDefaultRoute();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+               
+            });
         }
     }
 }
