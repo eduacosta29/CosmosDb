@@ -17,6 +17,7 @@
         private readonly Configuration.Configuration _configuration;
         private Uri _databaseUri;
         private Uri _databaseCollectionUri;
+        private Uri _documentUri;
 
 
         public Repository(IDocumentClient docoDocumentClient, Configuration.Configuration configuration)
@@ -30,13 +31,36 @@
                 UriFactory.CreateDocumentCollectionUri(this._configuration.CosmosDb.DatabaseName,
                     this._configuration.CosmosDb.ContainerName);
 
-
         }
 
         public async Task<T> Add<T>(T entity) where T : EntityBase
         {
            var _datos =  await  this._iDocumentClient.CreateDocumentAsync(this._databaseCollectionUri, entity);
-           return (T)new EntityBase() {ID = _datos.Resource.Id};
+           return (T)_datos.Resource;
+        }
+
+        public async Task<T> Update<T>(object id, T entity) where T : EntityBase
+        {
+
+            var _accesscondition = new AccessCondition(){Type = AccessConditionType.IfMatch , Condition = entity.ETag};
+
+            var document = this._iDocumentClient.CreateDocumentQuery(this._databaseCollectionUri)
+                .Where(c => c.Id == id).FirstOrDefault();
+
+            var resource = await this._iDocumentClient.ReplaceDocumentAsync(document.SelfLink, entity, new RequestOptions(){AccessCondition = _accesscondition});
+
+            return (T)resource.Resource;
+        }
+
+        public async Task Detele<T>(T entity) where T : EntityBase
+        {
+            var _accesscondition = new AccessCondition() { Type = AccessConditionType.IfMatch, Condition = entity.ETag };
+            var document = this._iDocumentClient.CreateDocumentQuery(this._databaseCollectionUri)
+                .Where(c => c.Id == entity.Id).FirstOrDefault();
+
+             await this._iDocumentClient.DeleteDocumentAsync(document.SelfLink, new RequestOptions(){AccessCondition = _accesscondition});
+
+            
         }
 
         public IEnumerable<string> CollectionQuery()
@@ -76,6 +100,7 @@
 
         public IList<T> GetList<T>() where T : EntityBase
         {
+            
             return this._iDocumentClient.CreateDocumentQuery(this._databaseCollectionUri, new FeedOptions(){EnableCrossPartitionQuery = true}).Select(c => (T)c).ToList();
 
         }

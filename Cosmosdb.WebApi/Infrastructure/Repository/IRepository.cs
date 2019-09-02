@@ -14,6 +14,10 @@
 
         Task<T> Add<T>(T entity) where T : EntityBase;
 
+        Task<T> Update<T>(object id, T entity) where T : EntityBase;
+
+        Task Detele<T>(T entity) where T : EntityBase;
+
         Task CreateDataBase(string name);
 
         IEnumerable<string> DataBaseQuery();

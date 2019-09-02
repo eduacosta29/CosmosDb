@@ -7,7 +7,7 @@
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
 
-    public class FamilyModel : IRequest<IActionResult>
+    public class FamilyModelCommand : IRequest<IActionResult>
     {
 
         

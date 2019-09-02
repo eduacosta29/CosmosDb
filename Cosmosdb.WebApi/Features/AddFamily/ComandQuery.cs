@@ -1,4 +1,7 @@
-﻿namespace Cosmosdb.WebApi.Features.AddFamily
+﻿using AutoMapper;
+using Cosmosdb.WebApi.Model;
+
+namespace Cosmosdb.WebApi.Features.AddFamily
 {
     using System;
     using System.Collections.Generic;
@@ -9,19 +12,26 @@
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
 
-    public class ComandQuery : IRequestHandler<FamilyModel, IActionResult>
+    public class ComandQuery : IRequestHandler<FamilyModelCommand, IActionResult>
     {
         private IRepository _respository;
-        public ComandQuery(IRepository repository)
+        private readonly IMapper _mapper;
+        public ComandQuery(IRepository repository, IMapper mapper)
         {
 
             this._respository = repository;
+            this._mapper = mapper;
 
         }
 
-        public Task<IActionResult> Handle(FamilyModel request, CancellationToken cancellationToken)
+        public async Task<IActionResult> Handle(FamilyModelCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+
+            var _family = this._mapper.Map<Family>(request);
+
+            var _datos = await this._respository.Add(_family);
+
+            return  new OkObjectResult(_datos);
         }
     }
 }
