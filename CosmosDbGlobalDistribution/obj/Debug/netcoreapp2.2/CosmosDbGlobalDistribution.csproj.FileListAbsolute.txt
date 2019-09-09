@@ -8,3 +8,7 @@ C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.AssemblyInfo.cs
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\Microsoft.Azure.Documents.ServiceInterop.dll
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\Cosmos.CRTCompat.dll
+C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.pdb
+C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.dll
+C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.pdb
+C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\appsettings.json

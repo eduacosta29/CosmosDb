@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.Azure.DocumentDB.Core": "2.6.0",
           "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
           "Microsoft.Extensions.Configuration.Json": "2.2.0"
         },
         "runtime": {
