@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "68fa8c12b6e43bafa2f9abf71df09bb624f44d7f"
+    "signature": "a72f9b1dd3ec14c24411f500702e2ca2d86b764c"
   },
   "compilationOptions": {
     "defines": [
@@ -32,7 +32,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.Azure.DocumentDB.Core": "2.6.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "StyleCop.Analyzers": "1.1.118",
+          "StyleCop": "6.1.0",
           "Swashbuckle.AspNetCore": "4.0.1"
         },
         "runtime": {
@@ -260,7 +260,17 @@
           }
         }
       },
-      "StyleCop.Analyzers/1.1.118": {},
+      "StyleCop/6.1.0": {
+        "runtime": {
+          "lib/net40/StyleCop.dll": {
+            "assemblyVersion": "6.1.0.0",
+            "fileVersion": "6.1.7038.1"
+          }
+        },
+        "compile": {
+          "lib/net40/StyleCop.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/4.0.1": {
         "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "4.0.1",
@@ -3849,12 +3859,12 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
     },
-    "StyleCop.Analyzers/1.1.118": {
+    "StyleCop/6.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
-      "path": "stylecop.analyzers/1.1.118",
-      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
+      "sha512": "sha512-TnF8o1R5ZRkFO1TO9ugtccEfrKoH5hRSFZXxSbZzRU27HQqwo7JLLgTXnpbvl44UyC9Jt8fPoLPnU5l6GsIhzg==",
+      "path": "stylecop/6.1.0",
+      "hashPath": "stylecop.6.1.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/4.0.1": {
       "type": "package",

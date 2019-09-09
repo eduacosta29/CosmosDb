@@ -39,7 +39,7 @@ namespace Cosmosdb.WebApi.Controllers
 
         [HttpPost]
         [ProducesResponseType( 200)]
-        public async Task<IActionResult> AddFamily([FromBody]Features.AddFamily.FamilyModel familyModel) =>  await this._mediator.Send(familyModel).ConfigureAwait(false);
+        public async Task<IActionResult> AddFamily([FromBody]Features.AddFamily.FamilyModelCommand familyModel) =>  await this._mediator.Send(familyModel).ConfigureAwait(false);
         
 
         // GET api/values/5
