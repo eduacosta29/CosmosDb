@@ -10,9 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDbGremlin", "..\CosmosDbGremlin\CosmosDbGremlin.csproj", "{7F603D12-4D2A-48E4-88B3-33B4EC0AA472}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDbGremlin", "..\CosmosDbGremlin\CosmosDbGremlin.csproj", "{7F603D12-4D2A-48E4-88B3-33B4EC0AA472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDbGlobalDistribution", "..\CosmosDbGlobalDistribution\CosmosDbGlobalDistribution.csproj", "{84B58F6A-15BD-4980-8A30-028BF72B010A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDbGlobalDistribution", "..\CosmosDbGlobalDistribution\CosmosDbGlobalDistribution.csproj", "{84B58F6A-15BD-4980-8A30-028BF72B010A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureFunction", "..\AzureFunction\AzureFunction.csproj", "{A4D92C43-6577-471F-88C6-6B5E320FEB4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDbGraph", "..\CosmosDbGraph\CosmosDbGraph.csproj", "{8F9A524A-0E00-4E21-B73C-F6EE12EB11F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,14 @@ Global
 		{84B58F6A-15BD-4980-8A30-028BF72B010A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B58F6A-15BD-4980-8A30-028BF72B010A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84B58F6A-15BD-4980-8A30-028BF72B010A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D92C43-6577-471F-88C6-6B5E320FEB4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D92C43-6577-471F-88C6-6B5E320FEB4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D92C43-6577-471F-88C6-6B5E320FEB4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D92C43-6577-471F-88C6-6B5E320FEB4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9A524A-0E00-4E21-B73C-F6EE12EB11F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9A524A-0E00-4E21-B73C-F6EE12EB11F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9A524A-0E00-4E21-B73C-F6EE12EB11F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9A524A-0E00-4E21-B73C-F6EE12EB11F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

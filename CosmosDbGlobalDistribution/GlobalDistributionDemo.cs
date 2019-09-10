@@ -13,31 +13,20 @@ namespace CosmosDbGlobalDistribution
 {
 	public static class GlobalDistributionDemo
 	{
-		public static async Task Run()
+		public static async Task Run(DatabaseConfiguration databaseConfiguration)
 		{
 
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
-            IConfigurationRoot configuration = builder.Build();
+     
 
 
-
-            var endpoint = configuration.GetSection("CosmosDb:URI").Value;
-			var masterKey = configuration.GetSection("CosmosDb:Key").Value;
-            var databasename = configuration.GetSection("CosmosDb:DatabaseName").Value;
-            var collectionname = configuration.GetSection("CosmosDb:ContainerName").Value;
-
-
-            var collUri = UriFactory.CreateDocumentCollectionUri(databasename, collectionname);
+            var collUri = UriFactory.CreateDocumentCollectionUri(databaseConfiguration.CosmosDb.DatabaseName, databaseConfiguration.CosmosDb.ContainerName);
 			var sql = "SELECT * FROM c WHERE c.address.zipCode = '60603'";
 
 			var connectionPolicy = new ConnectionPolicy();
-			connectionPolicy.PreferredLocations.Add(configuration.GetSection("SouthBrazilEndpoint").Value);
-			connectionPolicy.PreferredLocations.Add(configuration.GetSection("SouthAsiaEndPoint").Value);
+			connectionPolicy.PreferredLocations.Add(databaseConfiguration.SouthBrazilEndpoint);
+			connectionPolicy.PreferredLocations.Add(databaseConfiguration.SouthAsiaEndPoint);
 
-			using (var client = new DocumentClient(new Uri(endpoint), masterKey, connectionPolicy))
+			using (var client = new DocumentClient(new Uri(databaseConfiguration.CosmosDb.URI), databaseConfiguration.CosmosDb.Key, connectionPolicy))
 			{
 				for (var i = 0; i < 100; i++)
 				{
