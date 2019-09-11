@@ -38,7 +38,7 @@ Azure Cosmos DB support 4 Apis
 
 
 #### Consistency Levels
-Azure Cosmos Db support 5 consistencies levels.
+Azure Cosmos DB support 5 consistencies levels.
 
 ![](https://i0.wp.com/blog.nitrix-reloaded.com/wp-content/uploads/2018/10/image-13.png)
 
