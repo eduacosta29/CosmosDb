@@ -1,36 +1,48 @@
-Azure CosmosDb
+![](https://i1.wp.com/whyazure.in/wp-content/uploads/2017/09/COSMOSDB.png?fit=225%2C225&ssl=1)
+
+Azure Cosmos Db
 ==============
 
-Internally, Cosmos DB stores "items" in
-"containers"[[2]](https://en.wikipedia.org/wiki/Cosmos_DB#cite_note-2), with
-these 2 concepts being surfaced differently depending on the API used (these
-would be "documents" in "collections" when using the MongoDB-compatible API, for
-example). Containers are grouped in "databases", which are analogous to
-namespaces above containers. Containers are schema-agnostic, which means that no
-schema is enforced when adding items.
 
-By default, every field in each item is automatically indexed, generally
-providing good performance without tuning to specific query patterns. These
-defaults can be modified by setting an indexing policy which can specify, for
-each field, the index type and precision desired. Cosmos DB offers 2 types of
-indexes:
+Azure Cosmos DB is a **low-latency**(*how fast is the responds for specific request*), **high throughput**(*how many request unit can be served within specific period of time*), **globally distributed**, a multi-model database which can scale within minutes and offers **5 consistency options** to let you decide how to deal with the CAP theorem.
 
--   Range,
-    supporting [range](https://en.wikipedia.org/wiki/Range_query_(database)) and
-    ORDER BY queries,
 
--   Spatial, supporting [spatial
-    queries](https://en.wikipedia.org/wiki/Spatial_query) from points, polygons
-    and line strings encoded in standard GeoJSON fragments.
+------------
 
-Containers can also enforce unique key constraints to ensure data
-integrity.[[3]](https://en.wikipedia.org/wiki/Cosmos_DB#cite_note-3)
+#### Low latency
+![](https://i2.wp.com/blog.thingx.cloud/wp-content/uploads/2018/10/image-31.png)
 
-Each Cosmos DB container exposes a change feed, which clients can subscribe to
-in order to get notified of new items being added or updated in the
-container.[[4]](https://en.wikipedia.org/wiki/Cosmos_DB#cite_note-4) Item
-deletions are currently not exposed by the change feed. Changes are persisted by
-Cosmos DB, which makes it possible to request changes from any point in time
-since the creation of the container.
+------------
 
-![C:\\Users\\DH347QV\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\13AF29D6.tmp](media/87527d23b2cd58f567d594bcd2d1108c.jpg)
+#### APIS Global Distribution
+Azure Cosmos DB support 4 Apis
+- SQL API
+- Mongo Db API
+- Cassandra API
+- Gremlin API
+
+![](https://docs.microsoft.com/en-us/azure/cosmos-db/media/introduction/azure-cosmos-db.png)
+
+
+------------
+
+
+
+#### Global Distribution
+
+![](https://i1.wp.com/blog.thingx.cloud/wp-content/uploads/2018/10/image-30.png)
+
+
+------------
+
+
+
+#### Consistency Levels
+Azure Cosmos Db support 5 consistencies levels.
+
+![](https://i0.wp.com/blog.nitrix-reloaded.com/wp-content/uploads/2018/10/image-13.png)
+
+
+
+
+
