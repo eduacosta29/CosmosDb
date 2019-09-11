@@ -1,6 +1,6 @@
 ![](https://i1.wp.com/whyazure.in/wp-content/uploads/2017/09/COSMOSDB.png?fit=225%2C225&ssl=1)
 
-Azure Cosmos Db
+Azure Cosmos DB
 ==============
 
 

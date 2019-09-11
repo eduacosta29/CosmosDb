@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Remove="Cleanup.cs" />
+    <Compile Remove="IndexingDemo.cs" />
     <Compile Remove="ServerSideProgramming\Cleanup.cs" />
     <Compile Remove="ServerSideProgramming\UserDefinedFunctionsDemo.cs" />
   </ItemGroup>
