@@ -1,34 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj": {}
+    "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj": {
+    "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj",
+        "projectUniqueName": "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj",
         "projectName": "CosmosDbCassandra",
-        "projectPath": "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj",
-        "packagesPath": "C:\\Users\\eduac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\obj\\",
+        "projectPath": "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\CosmosDbCassandra.csproj",
+        "packagesPath": "C:\\Users\\DH347QV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbCassandra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\eduac\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\DH347QV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\NugetPaquetes": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/EYCTCanvas/_packaging/CanvasCommon@Local/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {

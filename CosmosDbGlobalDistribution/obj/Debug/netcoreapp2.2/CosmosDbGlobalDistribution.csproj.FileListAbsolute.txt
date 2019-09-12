@@ -12,3 +12,17 @@ C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.dll
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.pdb
 C:\Users\eduac\source\repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\Cosmos.CRTCompat.dll
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.deps.json
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.runtimeconfig.json
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.runtimeconfig.dev.json
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.dll
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\bin\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.pdb
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.csprojAssemblyReference.cache
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.csproj.CoreCompileInputs.cache
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.AssemblyInfoInputs.cache
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.AssemblyInfo.cs
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.dll
+C:\Users\DH347QV\Source\Repos\eduacosta29\CosmosDb\CosmosDbGlobalDistribution\obj\Debug\netcoreapp2.2\CosmosDbGlobalDistribution.pdb

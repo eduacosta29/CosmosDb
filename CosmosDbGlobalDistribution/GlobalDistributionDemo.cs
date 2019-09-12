@@ -16,8 +16,6 @@ namespace CosmosDbGlobalDistribution
 		public static async Task Run(DatabaseConfiguration databaseConfiguration)
 		{
 
-     
-
 
             var collUri = UriFactory.CreateDocumentCollectionUri(databaseConfiguration.CosmosDb.DatabaseName, databaseConfiguration.CosmosDb.ContainerName);
 			var sql = "SELECT * FROM c WHERE c.address.zipCode = '60603'";

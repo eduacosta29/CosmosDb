@@ -29,12 +29,12 @@ namespace CosmosDbGlobalDistribution
 
 
 
-            // GlobalDistributionDemo.Run(_databaseConfiguration).Wait();
+            await GlobalDistributionDemo.Run(_databaseConfiguration);
             //await  DatabasesDemo.Run(_databaseConfiguration);
             //await  CollectionsDemo.Run(_databaseConfiguration);
             //await DocumentsDemo.Run(_databaseConfiguration);
             //await StoredProceduresDemo.Run(_databaseConfiguration);
-            await TriggersDemo.Run(_databaseConfiguration);
+            //await TriggersDemo.Run(_databaseConfiguration);
 
         }
     }

@@ -2667,35 +2667,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eduac\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\DH347QV\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbGraph\\CosmosDbGraph.csproj",
+      "projectUniqueName": "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbGraph\\CosmosDbGraph.csproj",
       "projectName": "CosmosDbGraph",
-      "projectPath": "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbGraph\\CosmosDbGraph.csproj",
-      "packagesPath": "C:\\Users\\eduac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eduac\\source\\repos\\eduacosta29\\CosmosDb\\CosmosDbGraph\\obj\\",
+      "projectPath": "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbGraph\\CosmosDbGraph.csproj",
+      "packagesPath": "C:\\Users\\DH347QV\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DH347QV\\Source\\Repos\\eduacosta29\\CosmosDb\\CosmosDbGraph\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\eduac\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\DH347QV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\NugetPaquetes": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/EYCTCanvas/_packaging/CanvasCommon@Local/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
